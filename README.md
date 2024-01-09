@@ -29,3 +29,27 @@ return (
   <Button>Example</Button>
 );
 ```
+
+## Structure
+
+```
+src
+├── components
+│   ├── Button
+│   │   ├── Button.module.css - // CSS Modules styles for component
+│   │   ├── Button.story.tsx - -// Stories docs for component
+│   │   ├── Button.test.tsx - - // Unit tests for component
+│   │   ├── Button.tsx - - - - -// React Component
+│   │   └── index.ts - - - - - -// Barrel file with re-exports
+│   └── Surface
+│       ├── Surface.module.css -// CSS Modules styles for component
+│       ├── Surface.story.tsx - // Stories docs for component
+│       ├── Surface.test.tsx - -// Unit tests for component
+│       ├── Surface.tsx - - - - // React Component
+│       └── index.ts - - - - - -// Barrel file with re-exports
+├── global.d.ts - - - - - - - - // Global typings for correct CSS Modules types
+├── index.ts - - - - - - - - - -// Entry Barrel file with re-exports
+├── setupTest.ts - - - - - - - -// Utility file to set-up tests environment
+└── styles
+    └── theme.css - - - - - - - // Theme with CSS variables
+```
