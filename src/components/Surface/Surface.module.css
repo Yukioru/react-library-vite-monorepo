@@ -1,10 +1,9 @@
 .base {
   font-family: var(--font-sans from "@/styles/theme.css");
   background-color: #fff;
-  border: 1px solid #e0e0e0;
   border-radius: var(--radius-large from "@/styles/theme.css");
-  color: #112;
-  cursor: pointer;
-  display: inline-block;
-  padding: 8px 16px;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+  padding: 16px;
+  position: relative;
+  width: 100%;
 }

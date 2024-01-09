@@ -1,0 +1,6 @@
+:root {
+  --font-sans: blinkmacsystemfont, -apple-system, 'Segoe UI', roboto,
+    helvetica, arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  --radius-large: 0.5rem;
+}
