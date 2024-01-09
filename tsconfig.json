@@ -22,7 +22,7 @@
     "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "baseUrl": "./",
     "paths": {
-      "$components/*": ["src/components/*"]
+      "@/*": ["src/*"]
     }
   },
   "include": ["src"],
