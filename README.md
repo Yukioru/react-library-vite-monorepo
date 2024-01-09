@@ -47,9 +47,11 @@ src
 │       ├── Surface.test.tsx - -// Unit tests for component
 │       ├── Surface.tsx - - - - // React Component
 │       └── index.ts - - - - - -// Barrel file with re-exports
+├── styles
+│    └── theme.css - - - - - - - // Theme with CSS variables
+│
 ├── global.d.ts - - - - - - - - // Global typings for correct CSS Modules types
 ├── index.ts - - - - - - - - - -// Entry Barrel file with re-exports
-├── setupTest.ts - - - - - - - -// Utility file to set-up tests environment
-└── styles
-    └── theme.css - - - - - - - // Theme with CSS variables
+└── setupTest.ts - - - - - - - -// Utility file to set-up tests environment
+
 ```
