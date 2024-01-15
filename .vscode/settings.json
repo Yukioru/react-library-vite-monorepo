@@ -6,9 +6,6 @@
     "source.fixAll.eslint": "explicit",
     "source.fixAll.stylelint": "explicit"
   },
-  "[css]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint"
-  },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
