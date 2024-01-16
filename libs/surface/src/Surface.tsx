@@ -7,5 +7,11 @@ export function Surface({
   className,
   ...props
 }: PropsWithChildren<HTMLProps<HTMLDivElement>>) {
-  return <div className={clsx(styles.base, className)} {...props} />;
+  return (
+    <div
+      data-ui="Surface"
+      className={clsx(styles.base, className)}
+      {...props}
+    />
+  );
 }

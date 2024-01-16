@@ -1,0 +1,7 @@
+{
+  "extends": "@uikit/configs/tsconfig",
+  "include": ["."],
+  "compilerOptions": {
+    "baseUrl": "./"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "@uikit/storybook",
+  "description": "React Library Template / Storybook",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "keywords": [
+    "react",
+    "library",
+    "storybook"
+  ],
+  "author": "Andrey Kondalov <andrey@kondalov.com>",
+  "homepage": "https://github.com/Yukioru/react-library-vite#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yukioru/react-library-vite.git"
+  },
+  "scripts": {
+    "dev": "storybook dev -p 6006 --",
+    "build:docs": "storybook build -o dist",
+    "prepublishOnly": "npm run build",
+    "test": "vitest --passWithNoTests --run --",
+    "test:watch": "vitest --",
+    "coverage": "vitest run --coverage"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@uikit/theme": "workspace:^",
+    "@uikit/configs": "workspace:^",
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^8.0.0-alpha.10",
+    "@storybook/addon-essentials": "^8.0.0-alpha.10",
+    "@storybook/addon-interactions": "^8.0.0-alpha.10",
+    "@storybook/addon-links": "^8.0.0-alpha.10",
+    "@storybook/blocks": "^8.0.0-alpha.10",
+    "@storybook/builder-vite": "^8.0.0-alpha.10",
+    "@storybook/react-vite": "^8.0.0-alpha.10",
+    "@storybook/test": "^8.0.0-alpha.10"
+  }
+}

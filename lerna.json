@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "npmClient": "pnpm",
+  "useWorkspaces": true,
+  "packages": ["libs/*"],
+  "command": {
+    "publish": {
+      "allowBranch": ["main"],
+      "conventionalCommits": true,
+      "ignoreChanges": ["ignored-file", "pnpm-lock.yaml", "*.md"],
+      "message": "chore(release): 🎉 publish %s"
+    }
+  }
+}
