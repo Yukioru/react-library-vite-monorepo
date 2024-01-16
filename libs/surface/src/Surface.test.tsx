@@ -5,9 +5,9 @@ import { Surface } from './Surface';
 
 describe('Surface', () => {
   it('should render with content', () => {
-    const { getByRole } = render(<Surface>Content</Surface>);
-    const button = getByRole('div');
+    const { container } = render(<Surface>Content</Surface>);
+    const button = container.querySelector('[data-ui="Surface"]');
 
-    expect(button.textContent).toBe('Content');
+    expect(button?.textContent).toBe('Content');
   });
 });

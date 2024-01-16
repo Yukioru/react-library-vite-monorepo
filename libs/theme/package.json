@@ -1,6 +1,6 @@
 {
-  "name": "@uikit/button",
-  "description": "React Library Template / Button",
+  "name": "@uikit/theme",
+  "description": "React Library Template / Theme",
   "version": "0.0.1",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -9,7 +9,7 @@
   "keywords": [
     "react",
     "library",
-    "button"
+    "theme"
   ],
   "author": "Andrey Kondalov <andrey@kondalov.com>",
   "homepage": "https://github.com/Yukioru/react-library-vite#readme",
@@ -38,16 +38,10 @@
     "coverage": "vitest run --coverage"
   },
   "peerDependencies": {
-    "clsx": "^2",
-    "react": "^18",
-    "react-dom": "^18"
+    "tailwindcss": "^3"
   },
   "devDependencies": {
     "@uikit/configs": "workspace:^",
-    "@types/react": "^18.2.47",
-    "@types/react-dom": "^18.2.18",
-    "clsx": "^2.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "tailwindcss": "^3.4.1"
   }
 }

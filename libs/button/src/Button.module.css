@@ -1,8 +1,8 @@
 .base {
-  font-family: var(--font-sans from "@/styles/theme.css");
+  font-family: var(--font-sans);
   background-color: #fff;
   border: 1px solid #e0e0e0;
-  border-radius: var(--radius-large from "@/styles/theme.css");
+  border-radius: var(--radius-large);
   color: #112;
   cursor: pointer;
   display: inline-block;

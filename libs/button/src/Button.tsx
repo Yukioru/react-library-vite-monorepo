@@ -1,5 +1,6 @@
 import { HTMLProps, PropsWithChildren } from 'react';
 import clsx from 'clsx';
+
 import styles from './Button.module.css';
 
 export type ButtonProps = PropsWithChildren<

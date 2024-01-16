@@ -2,9 +2,9 @@
   "name": "@uikit/root",
   "description": "React Library Template",
   "version": "0.0.1",
-  "type": "module",
   "license": "MIT",
   "private": true,
+  "type": "module",
   "publishConfig": {
     "access": "restricted"
   },
@@ -24,53 +24,45 @@
     "url": "https://github.com/Yukioru/react-library-vite.git"
   },
   "scripts": {
+    "dev": "ycmd dev",
     "prepare": "husky install",
     "start": "ycmd start",
-    "dev": "ycmd dev",
     "build": "ycmd build",
+    "build:docs": "ycmd build:docs",
     "test": "ycmd test",
+    "test:watch": "ycmd test:watch",
     "prepack": "ycmd prepack",
     "release": "ycmd release"
   },
+  "resolutions": {
+    "vite": "^5"
+  },
   "devDependencies": {
-    "@uikit/configs": "workspace:^",
-    "ycmd": "^0.16.1",
-    "typescript": "^5.3.3",
-    "storybook": "^7.6.7",
-    "@storybook/addon-essentials": "^7.6.7",
-    "@storybook/addon-interactions": "^7.6.7",
-    "@storybook/addon-links": "^7.6.7",
-    "@storybook/addon-onboarding": "^1.0.10",
-    "@storybook/blocks": "^7.6.7",
-    "@storybook/builder-vite": "^7.6.7",
     "@storybook/react": "^7.6.7",
-    "@storybook/react-vite": "^7.6.7",
-    "@storybook/test": "^7.6.7",
-    "@testing-library/jest-dom": "^6.2.0",
     "@testing-library/react": "^14.1.2",
-    "@types/node": "^20.10.7",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
-    "@vitest/coverage-istanbul": "^1.1.3",
-    "jsdom": "^23.2.0",
+    "@uikit/configs": "workspace:^",
+    "@uikit/presets": "workspace:^",
     "husky": "^8.0.3",
+    "jsdom": "^23.2.0",
     "lint-staged": "^15.2.0",
-    "typescript-plugin-css-modules": "^5.0.2",
-    "vite": "^5.0.11",
-    "vite-plugin-dts": "^3.7.0",
-    "vitest": "^1.1.3"
+    "typescript": "^5.3.3",
+    "vite": "^5",
+    "vitest": "^1.1.3",
+    "ycmd": "^0.17.1"
   },
-  "prettier": "@uikit/configs/prettier",
+  "prettier": "./shared/presets/prettier",
   "eslintConfig": {
-    "extends": "@uikit/configs/eslint"
+    "extends": "./shared/presets/eslint"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "eslint --quiet --fix",
-      "prettier --write --ignore-unknown"
+      "eslint --quiet --fix -c ./shared/presets/eslint.js",
+      "prettier --write --ignore-unknown --config ./shared/presets/prettier.js"
     ],
     "*.{json,html}": [
-      "prettier --write --ignore-unknown"
+      "prettier --write --ignore-unknown --config ./shared/presets/prettier.js"
     ]
   },
   "ycmd": {

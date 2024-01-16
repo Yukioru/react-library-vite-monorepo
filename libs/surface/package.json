@@ -1,6 +1,6 @@
 {
-  "name": "@uikit/button",
-  "description": "React Library Template / Button",
+  "name": "@uikit/surface",
+  "description": "React Library Template / Surface",
   "version": "0.0.1",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -9,7 +9,7 @@
   "keywords": [
     "react",
     "library",
-    "button"
+    "surface"
   ],
   "author": "Andrey Kondalov <andrey@kondalov.com>",
   "homepage": "https://github.com/Yukioru/react-library-vite#readme",

@@ -1,5 +1,6 @@
 module.exports = {
   env: {
+    node: true,
     browser: true,
     es2020: true,
   },
@@ -19,7 +20,7 @@ module.exports = {
     },
     'import/resolver': {
       typescript: {
-        project: require.resolve(__dirname, './tsconfig.json'),
+        project: ['**/tsconfig.json', 'libs/*/tsconfig.json'],
       },
     },
   },
