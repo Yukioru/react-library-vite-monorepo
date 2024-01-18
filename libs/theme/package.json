@@ -2,7 +2,8 @@
   "name": "@uikit/theme",
   "description": "React Library Template / Theme",
   "version": "0.0.1",
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "license": "MIT",
   "type": "module",
@@ -24,11 +25,16 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.cjs"
     },
     "./package.json": "./package.json",
-    "./*": "./dist/*",
-    "./**/*": "./dist/**/*"
+    "./*": {
+      "import": "./dist/*.js",
+      "types": "./dist/*.d.ts",
+      "require": "./dist/*.cjs",
+      "default": "./dist/*.cjs"
+    }
   },
   "scripts": {
     "build": "tsc && vite build --",

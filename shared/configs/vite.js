@@ -11,6 +11,28 @@ const browserslistConfig = 'last 3 versions, not dead';
 const ignoreList = ['src/**/*.story.tsx', 'src/**/*.test.tsx', 'src/**/*.d.ts'];
 
 const jsTargets = browserslistToEsbuild(browserslistConfig);
+const outputFormats = ['es', 'cjs'];
+
+function generateOutputRules(formats = []) {
+  const rest = {
+    assetFileNames: '[name][extname]',
+    globals: {
+      react: 'React',
+      'react-dom': 'ReactDOM',
+    },
+  };
+
+  const mapping = {
+    es: 'js',
+    cjs: 'cjs',
+  };
+
+  return formats.map(format => ({
+    format,
+    entryFileNames: `[name].${mapping[format]}`,
+    ...rest,
+  }));
+}
 
 export default ({ currentDir, fileToURL }) => ({
   resolve: {
@@ -22,6 +44,7 @@ export default ({ currentDir, fileToURL }) => ({
     react(),
     dts({
       exclude: ignoreList,
+      insertTypesEntry: true,
     }),
   ],
   build: {
@@ -32,7 +55,6 @@ export default ({ currentDir, fileToURL }) => ({
     target: jsTargets,
     lib: {
       entry: resolve(currentDir, 'src/index.ts'),
-      formats: ['es', 'cjs'],
     },
     rollupOptions: {
       external: ['react', 'react/jsx-runtime', 'react-dom'],
@@ -46,14 +68,7 @@ export default ({ currentDir, fileToURL }) => ({
             fileURLToPath(fileToURL(file)),
           ]),
       ),
-      output: {
-        assetFileNames: 'assets/[name][extname]',
-        entryFileNames: '[name].js',
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-        },
-      },
+      output: generateOutputRules(outputFormats),
     },
   },
   test: {
