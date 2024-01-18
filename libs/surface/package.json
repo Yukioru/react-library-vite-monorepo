@@ -29,6 +29,7 @@
       "default": "./dist/index.cjs"
     },
     "./package.json": "./package.json",
+    "./style.css": "./dist/style.css",
     "./*": {
       "import": "./dist/*.js",
       "types": "./dist/*.d.ts",
