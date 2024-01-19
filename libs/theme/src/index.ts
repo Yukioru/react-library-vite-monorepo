@@ -1,3 +1,1 @@
-import '@/theme.css';
-
-export * from '@/tailwind-theme';
+export { default as tailwindPreset } from '@/tailwind-theme';

@@ -27,6 +27,10 @@ const config: StorybookConfig = {
             __dirname,
             '../node_modules/@uikit/theme/src/theme.css',
           ),
+          '@tailwind-globals.css': resolve(
+            __dirname,
+            '../node_modules/@uikit/theme/src/tailwind-globals.css',
+          ),
         },
       },
       plugins: await withoutVitePlugins(config.plugins, [

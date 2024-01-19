@@ -29,7 +29,7 @@
       "default": "./dist/index.cjs"
     },
     "./package.json": "./package.json",
-    "./style.css": "./dist/style.css",
+    "./*.css": "./dist/*.css",
     "./*": {
       "import": "./dist/*.js",
       "types": "./dist/*.d.ts",
@@ -44,11 +44,8 @@
     "test:watch": "vitest --",
     "coverage": "vitest run --coverage"
   },
-  "peerDependencies": {
-    "tailwindcss": "^3"
-  },
   "devDependencies": {
     "@uikit/configs": "workspace:^",
-    "tailwindcss": "^3.4.1"
+    "glob": "^10.3.10"
   }
 }

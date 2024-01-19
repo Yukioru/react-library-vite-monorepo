@@ -14,5 +14,20 @@
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html",
+    "typescriptreact": "html"
+  },
+  "tailwindCSS.classAttributes": ["class", "className", "ngClass", ".*Styles"],
+  "tailwindCSS.experimental.classRegex": [
+    "className=\"([^`]*)",
+    "className: '([^`]*)"
+  ]
 }

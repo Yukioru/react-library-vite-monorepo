@@ -10,5 +10,7 @@ export type ButtonProps = PropsWithChildren<
 >;
 
 export function Button({ className, ...props }: ButtonProps) {
-  return <button className={clsx(styles.base, className)} {...props} />;
+  return (
+    <button className={clsx(styles.base, className, 'bg-kek-500')} {...props} />
+  );
 }
