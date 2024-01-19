@@ -9,8 +9,13 @@ export type ButtonProps = PropsWithChildren<
   }
 >;
 
-export function Button({ className, ...props }: ButtonProps) {
+export function Button({ className, ...props }: ButtonProps): JSX.Element {
   return (
-    <button className={clsx(styles.base, className, 'bg-kek-500')} {...props} />
+    <>
+      <button
+        className={clsx(styles.base, className, 'bg-kek-500')}
+        {...props}
+      />
+    </>
   );
 }

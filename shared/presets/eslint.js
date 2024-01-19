@@ -25,6 +25,14 @@ module.exports = {
     },
   },
   plugins: ['react-refresh', 'prettier'],
+  overrides: [
+    {
+      files: ['**/*.ts', '**/*.tsx'],
+      rules: {
+        '@typescript-eslint/explicit-function-return-type': 'error',
+      },
+    },
+  ],
   rules: {
     'react-refresh/only-export-components': [
       'warn',

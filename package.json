@@ -59,6 +59,9 @@
     "extends": "./shared/presets/eslint"
   },
   "lint-staged": {
+    "*.{ts,tsx}": [
+      "node scripts/type-check-cli.js"
+    ],
     "*.{js,jsx,ts,tsx}": [
       "eslint --quiet --fix -c ./shared/presets/eslint.js",
       "prettier --write --ignore-unknown --config ./shared/presets/prettier.js"
