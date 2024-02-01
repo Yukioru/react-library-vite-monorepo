@@ -1,0 +1,14 @@
+.icon {
+  box-sizing: content-box;
+  display: inline-block;
+  user-select: none;
+  fill: currentColor;
+}
+
+.icon[data-axis*='x'] {
+  width: 1em;
+}
+
+.icon[data-axis*='y'] {
+  height: 1em;
+}

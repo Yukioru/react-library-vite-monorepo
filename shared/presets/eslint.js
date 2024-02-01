@@ -24,7 +24,7 @@ module.exports = {
       },
     },
   },
-  plugins: ['react-refresh', 'prettier'],
+  plugins: ['prettier'],
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],
@@ -34,12 +34,6 @@ module.exports = {
     },
   ],
   rules: {
-    'react-refresh/only-export-components': [
-      'warn',
-      {
-        allowConstantExport: true,
-      },
-    ],
     'import/order': [
       'error',
       {

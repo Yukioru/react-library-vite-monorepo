@@ -11,6 +11,8 @@
 **/dist
 **/dist-ssr
 **/*.local
+**/.pnpm-store
+**/public/.uikit
 
 # Editor directories and files
 **/.idea
@@ -20,6 +22,9 @@
 **/*.njsproj
 **/*.sln
 **/*.sw?
+**/.env
+!.npmrc
+**/.npmrc
 
 **/coverage/
 **/docs/

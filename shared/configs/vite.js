@@ -105,6 +105,7 @@ export default ({
   cssCodeSplit = false,
   externals = defaultExternals,
   callbacks = {},
+  plugins = [],
 }) => ({
   resolve: {
     alias: {
@@ -121,6 +122,7 @@ export default ({
       name: 'custom-plugin',
       ...composeRollupHooks(callbacks),
     },
+    ...plugins,
   ],
   build: {
     copyPublicDir: false,

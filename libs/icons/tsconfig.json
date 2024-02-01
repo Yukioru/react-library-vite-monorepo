@@ -1,0 +1,11 @@
+{
+  "extends": "@uikit/configs/tsconfig",
+  "include": ["src"],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}
+ 
