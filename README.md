@@ -16,7 +16,7 @@ Charged with Storybook, CSS Modules, Husky, Lint-staged, Vite and more.
 1. Import `style.css` into your project
 
 ```js
-import '@uikit/button/assets/style.css';
+import '@uikit/button/style.css';
 ```
 
 2. Import and use components
